@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="send.html" method="get">
+        <!-- input 타입 종류 -->
+        <input type="hidden" name="ip" value="127.0.0.1"><br> <!-- 눈에 보이지 않지만 다 넘어가서 저장됨 -->
+        <label>달력</label>
+        <input type="date" name="date"><br>
+        <label>검색</label>
+        <input type="search" name="search"><br>
+        <label>이메일</label> <!-- @ 미입력시 alert뜸-->
+        <input type="email" name="email"><br>
+        <label>아이디</label> 
+        <input type="text" name="id" id="id" maxlength="5"><br> <!-- name="(server변수)" / id="(문서상에서 찾아가는 위치점)" -->
+        <label>패스워드</label> <!-- 입력하면 안 보이게 **로 표시해줌-->
+        <input type="password" name="pw" id="pw"><br>
+        <input type="submit" value="로그인">
+    </form>
+</body>
+</html>
