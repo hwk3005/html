@@ -1,0 +1,38 @@
+<!-- 텍스트 스타일 종류
+text-shadow  word-spacing  white-space  overflow  text-overflow(영역 벗어난 텍스트 처리 how?)
+indent(들여쓰기)  line-height(문단의 줄간격 지정) list-style(-image/position)
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{text-shadow:5px 5px 3px #f00; font-size:50px;
+            letter-spacing: -2px; word-spacing: 20px;
+        }
+        h3{text-shadow: 7px -7px 5px rgba(0,0,0,0.2); font-size:50px;}
+        div{width:200px; height:20px; border:1px solid black;
+            white-space: nowrap; /*nowrap: 옆으로 / wrap: 아래로 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor:pointer;
+        }
+        div:hover{overflow: visible; white-space: wrap;
+                height:250px;
+        }
+    </style>
+</head>
+<body>
+    <h2>회원가입 진행상황</h2>
+    <h3>회원가입</h3>
+
+    <div>
+        네이버가 외국인 관광객들의 필수앱으로 자리잡은 ‘네이버 지도’를 통해 외국인 관광객에게 한국의 인기 핫플레이스를 소개하는 ‘비로컬(BE LOCAL)’ 캠페인을 시작한다고 14일 밝혔다.
+    </div>
+
+</body>
+</html>

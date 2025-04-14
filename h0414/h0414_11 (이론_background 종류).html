@@ -1,0 +1,40 @@
+<!-- background 종류 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        div{width:700px; height:500px; border:30px dotted green;
+            font-size:30px;
+            background-color:pink;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            /* background-clip 종류 (border-box: 선바깥부분기준, padding-box: 선안쪽, content-box: padding 안쪽부분) */
+            background-clip: padding-box;
+            padding:30px;
+            box-sizing: border-box;
+        }
+        #container{
+            width:100%; height: 900px;
+            background-image: url('images/back1.jpg');
+            background-size: 200px; /* auto  contain  cover  크기값  백분율 */
+            background-repeat: repeat; /* repeat(반복) no-repeat(반복x)  repeat-x or y(x축/y축) */
+            background-clip: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        네이버가 외국인 관광객들의 필수앱으로 자리잡은 ‘네이버 지도’를 통해 외국인 관광객에게 한국의 인기 핫플레이스를 소개하는 ‘비로컬(BE LOCAL)’ 캠페인을 시작한다고 14일 밝혔다.
+    </div>
+    
+    <div id="container">
+
+    </div>
+
+</body>
+</html>
