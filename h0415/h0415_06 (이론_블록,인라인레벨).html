@@ -1,0 +1,52 @@
+<!--
+css와 박스모델
+ - 블록레벨(아래로) div, p
+ - 인라인레벨(옆으로) span, image, strong
+ border
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding:0; margin:0;}
+        /* 블록요소 (하단으로 나타남, width,height 지정가능) */
+        /* border:solid 직선 */
+        div{border:2px solid black;
+            width:200px; height:100px;
+            display: inline-block;
+        }
+        /* 인라인요소 (옆으로 나타남, width,height 지정안됨) */
+        /* 인라인요소,블록요소 (옆으로 나타나면서, width,height 지정) */
+        /* border:dotted ···· */
+        span{border:2px dotted black;
+            width:200px; height:100px;
+            display: inline-block;
+        }
+        /* border:dashed ---- */
+        a{border:2px dashed black; width:100px; height:40px;
+          display: inline-block;
+          text-align: center; line-height: 40px;
+          text-decoration: none; color:inherit;
+        }
+        /* visibility:hidden; 공간 존재 */
+        #d01{visibility: hidden;}
+        /* display:none; 공간 사라짐 */
+        #d02{display: none;}
+    </style>
+</head>
+<body>
+    <div id="d01">1</div>
+    <div id="d02">2</div>
+    <div>3</div>
+    <hr>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <hr>
+    <a href="#">회원가입</a>
+</body>
+</html>
