@@ -1,0 +1,40 @@
+<!-- position (간단하게 제작할 때 use / 아닐경우 display:flex )
+ postion:relative; 현재 기준점으로 move
+ postion:absolute; position이 있는 부모 기준으로 move (position없을시 body기준)
+ postion:fixed; 고정
+ z-index:값(숫자); 우선순위 (숫자 클수록 앞에 있음), (웬만하면 안 쓰는 게 좋음)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0; font-size:20px;}
+        div{width:200px; height:200px; border:2px solid black; }
+        #container{width:800px; height:800px; border:5px solid green;
+            margin:50px auto; 
+        }
+        .c0,.c1,.c2,.c3,.c4{box-sizing: border-box;}
+        .c0{background:red; position:relative; left:400px; top:200px; z-index:10; }
+        .c1{background:blue; position:relative; left:250px; top:-100px; z-index:8; }
+        .c2{background:pink; position:relative; left:300px; top:-150px; }
+        .c3{background:yellow; }
+        .c4{background:aqua; }
+    </style>
+</head>
+<body>
+    <h2 id="first">위치소개</h2>
+    <div id="container">
+        <div class="c0">0</div>
+        <div class="c1">1</div>
+        <div class="c2">2</div>
+        <div class="c3">3</div>
+        <div class="c4">4</div>  <!-- 우선 1순위 (제일 밑에 있는 게 1순위)-->
+
+    </div>
+
+</body>
+</html>
