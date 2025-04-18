@@ -1,0 +1,44 @@
+<!-- 모바일 기기와 웹디자인
+ 반응형 웹디자인 - 가변형으로 width %로 만들어야 함. / 가변요소(em/rem단위)
+ 뷰포인트(viewport) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        div{border:1px solid black; box-sizing: border-box;}
+        header{width:100%; height:100px; background: blue; }
+        .banner{width:100%; height:400px;
+                background: url(images/pc버전.png) no-repeat 0 -400px; }
+        section{display: flex; }
+        .sect-left{width:50%; height:300px; background: gray;}
+        .sect-right{width:50%; height:300px; background: green;}
+        footer{width:100%; height:100px; background: orange;}
+        @media screen and (max-width:800px){
+            .banner{
+                background: url(images/mo버전.png) no-repeat 0 -550px;
+            }
+            section{flex-direction: column;}
+            .sect-left{width:100%; height:200px;}
+            .sect-right{width:100%; height:200px;}
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>상단부분</header>
+        <div class="banner">배너부분</div>
+        <section>
+            <div class="sect-left">뉴스부분</div>
+            <div class="sect-right">이미지부분</div>
+        </section>
+        <footer>하단부분</footer>
+    </div>
+</body>
+</html>
