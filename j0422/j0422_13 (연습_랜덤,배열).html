@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{text-align: center; border:1px solid black; border-collapse: collapse;}
+        th,td{width:150px; height:40px;}
+
+    </style>
+</head>
+<body>
+
+    <h2>랜덤숫자</h2>
+    
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>랜덤숫자</th>
+        </tr>
+        <tbody id="tbody">
+           
+        </tbody>
+    </table>
+
+    <script>
+        // Q. 1-10까지 랜덤숫자 6개를 출력, 중복된 숫자가 없도록 6개를 출력하시오.
+        //    arr1[] = 6개 출력하시오.
+        
+        let arr1=[]
+        // 랜덤숫자 6개 생성
+        while(i<6){
+            let randomNum=parseInt(Math.random()*10)+1;
+            arr1.push(randomNum);
+        }
+        // 
+        let hdata="";
+        for(let i=0; i<arr1.length; i++){
+            hdata+=`<tr>`;
+            hdata+=`<th>${i+1}</th>`;
+            hdata+=`<th>${arr1+1}</th>`;
+            hdata+=`</tr>`;
+        }
+        document.
+    </script>
+</body>
+</html>

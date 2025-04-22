@@ -1,0 +1,76 @@
+<!-- 전역 변수 (전체 함수에 적용, 쓰임 가능)
+지역 변수((함수)지역 내에서만 사용가능)
+
+복합대입연산자 +=
+증감연산자 ++
+논리연산자 ( or || / and && / not ! )
+삼항조건연산자 (조건식?자바스크립트 코드1:자바스크립트 코드2)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{border:1px solid black; width:200px;
+            height:40px; text-align: center;}
+    </style>
+    <script>
+        /*
+        // 함수선언
+        let num=0;  // 전역 변수
+
+        function cbtn(){
+            // 지역 변수((함수)지역 내에서만 사용가능)
+            // alert("확인");
+            num+=1;  // 복합대입연산자
+            // num++; 증감연산자
+            document.querySelector("#cal").innerText=num;
+            // $("#cal")
+        }
+        function cbtn2(){
+            num-=1;
+            // num=num-1
+            // num--;  파이썬에 지원안됨. (개발자들 많이 쓰임)
+            document.querySelector("#cal").innerText=num;
+        }
+        */
+        function cbtn(){
+            // alert("이벤트 당첨");
+            // Q1. 25세 이상, 남자만 이벤트 당첨됨. &&
+            let age=Number(document.querySelector("#age").value);
+            let gender=document.querySelector("#gender").value;
+            if (age>=25 && gender=="남자"){
+                alert("이벤트 당첨");
+            }else{
+                alert("아쉽게 당첨되지 않았습니다.");
+            }
+        } // cbtn
+
+        function checkBtn(){
+            let age=Number(document.querySelector("#age").value);
+            var resultTxt=age<25?"이벤트 신청안됨":"이벤트 신청가능";
+            document.querySelector("#txt").style.color="red";
+            document.querySelector("#txt").innerText=resultTxt;
+
+        }
+
+    </script>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <label>나이</label>
+    <input type="text" name="age" id="age">
+    <span id="txt">나이를 정확히 입력하세요.</span>
+    <br>
+    <label>성별</label>
+    <input type="text" name="gender" id="gender" onfocus="checkBtn()"><br>
+    <button type="button" onclick="cbtn()">이벤트 신청</button>
+
+
+    <!-- <button type="button" onclick="cbtn()">증가하기</button>
+    <button type="button" onclick="cbtn2()">감소하기</button> -->
+</body>
+</html>
