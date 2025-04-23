@@ -1,0 +1,43 @@
+<!-- 
+제이쿼리 배열 관련 메서드
+$.map()
+$.grep() 메서드 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <script>
+        let hdata=[
+        {"area":"서울","name":"홍길동","kor":90},
+        {"area":"부산","name":"유관순","kor":80},
+        {"area":"대구","name":"이순신","kor":70},
+        {"area":"서울","name":"강감찬","kor":90},
+        {"area":"광주","name":"김구","kor":50},
+        {"area":"인천","name":"김유신","kor":60},
+        ];
+
+        // map 반복적으로 실행하는 구문 (*파이썬 lambda식-map, filter 외우기)
+        //             배열          배값
+        let arr=$.map(hdata,function(h){
+            h.kor+=10;  
+            return h;
+
+            // if(h.area=="서울"){
+            //     return h;
+            // }
+        })
+        console.log(arr);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
