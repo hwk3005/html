@@ -334,6 +334,8 @@ select * from stuscore order by name desc;
 -- 합계로 역순정렬, 순차정렬
 select * from stuscore order by total desc;
 
+
+--------------------------------
 -- 파이썬 성적정렬 
 
 -- 등수처리 진행
