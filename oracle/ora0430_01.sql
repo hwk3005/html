@@ -12,7 +12,7 @@ update member set pw='2222' where id='ggg';
 commit;
 select * from member;
 
--- 테이블 생성 create
+-- 테이블 생성: create
 -- 검색: select
 -- 추가: insert
 -- 수정: update
@@ -36,11 +36,10 @@ select * from stuscore;
 select count(*) from stuscore;
 -- Q1. 평균80점 이상이면서, 국어점수가 90점이상을 검색하시오.
 select sno,kor,avg from stuscore where avg>=80 and kor>=90;
-select sno,kor,avg from stuscore where avg>=80;
 
 -- 이중쿼리 (서브쿼리)
 select sno,kor,avg from (select sno,kor,avg from stuscore where avg>=80)
- where kor>=90;
+where kor>=90;
 -- total 등수(rank) 순차정렬해서 조회하기
 select sno,total,rank() over(order by total desc) from stuscore;
 
@@ -65,6 +64,7 @@ select * from stuscore4;
 alter table stuscore3 add total number(3);  -- 정수3자리까지 가능
 alter table stuscore3 add avg number(5,2);  -- 전체5자리,소수점이하2자리
 alter table stuscore3 add rank number(3);
+
 -- 컬럼 정렬
 select * from stuscore3;
 select sno,name,total,kor,eng,math,avg,rank from stuscore3;
